@@ -1,0 +1,324 @@
+CODIGOS EM C (INICIO)
+
+// ex1: calculando area²
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    float largura;
+    float comprimento;
+    float area;  // Variável para armazenar o resultado da área
+
+    // Solicita e captura os dados do usuário
+    printf("Digite a largura: ");
+    scanf("%f", &largura);  // Lê um número de ponto flutuante (largura)
+
+    printf("Digite o comprimento: ");
+    scanf("%f", &comprimento);  // Lê um número de ponto flutuante (comprimento)
+
+    // Calcula a área
+    area = largura * comprimento;
+
+    // Exibe o resultado
+    printf("A área é: %.2f\n", area);
+
+    return 0;
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+//ex2 Calculando a media de 4 notas.
+#include <stdio.h>
+
+// Calculando média de 4 notas.
+int main() {
+    // Declaração das variáveis
+    float n1, n2, n3, n4, media;
+
+    // Solicita e captura os dados do usuário
+    printf("Digite a Primeira Nota: ");
+    scanf("%f", &n1); 
+
+    printf("Digite a Segunda Nota: ");
+    scanf("%f", &n2); 
+    
+    printf("Digite a Terceira Nota: ");
+    scanf("%f", &n3); 
+    
+    printf("Digite a Quarta Nota: ");
+    scanf("%f", &n4); 
+
+    // Calcula a média
+    media = (n1 + n2 + n3 + n4) / 4;
+
+    // Exibe o resultado
+    printf("A Média é: %.2f\n", media);
+
+    // Condições para aprovação ou reprovação
+    if (media < 5) {
+        printf("Reprovado\n");
+    } else if (media >= 6) {
+        printf("Aprovado\n");
+    } else {
+        printf("Recuperação\n"); // Caso a média esteja entre 5 e 6
+    }
+
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+//ex3: Calculando idade.
+#include <stdio.h>
+
+// Estrutura para armazenar a data de nascimento
+struct Data {
+    int dia;
+    int mes;
+    int ano;
+};
+
+int main() {
+    struct Data data;
+    int anoAtual, idade;
+
+    // Solicita a data de nascimento ao usuário
+    printf("Digite sua data de nascimento (dd/mm/aaaa): ");
+    scanf("%d/%d/%d", &data.dia, &data.mes, &data.ano);
+
+    // Solicita o ano atual para calcular a idade
+    printf("Digite o ano atual: ");
+    scanf("%d", &anoAtual);
+
+    // Calcula a idade com base no ano atual
+    idade = anoAtual - data.ano;
+
+    // Exibe a idade calculada
+    printf("Idade calculada: %d anos\n", idade);
+
+    // Verifica a faixa etária
+    if (idade <= 17) {
+        printf("Menor de Idade\n");
+    } else if (idade >= 60) {
+        printf("Idoso\n");
+    } else {
+        printf("Adulto\n");
+    }
+
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+// ex4: Calculando o IMC.
+// Calcule o IMC é calculado dividindo o peso em quilos pela altura em metro ao quadrado 
+// Formula: peso/(altura*altura).
+ /*
+    IMC Tabela
+    18.5 a 24.9     normal
+    25 a 29.9       sobre peso
+    30 a 34.9       obesidade classe I
+    35 a 39.9       obesidade classe II
+    */
+   #include <stdio.h>
+
+   int main() {
+       float peso, altura, imc;
+   
+       printf("Seja Bem-Vindo!\n");
+       printf("Vamos calcular o seu IMC.\n");
+       
+       printf("Digite o seu peso em kg (use '.' para decimal, ex: 70.5): ");
+       scanf("%f", &peso);
+   
+       printf("Digite a sua altura em metros (use '.' para decimal, ex: 1.75): ");
+       scanf("%f", &altura);
+   
+       // Cálculo do IMC
+       imc = peso / (altura * altura);
+   
+       // Exibição do resultado
+       printf("\nSeu IMC: %.2f\n", imc);
+   
+       // Classificação do IMC
+       if (imc >= 18.5 && imc <= 24.9) {
+           printf("Classificação: Normal.\n");
+       } 
+       else if (imc >= 25 && imc <= 29.9) {
+           printf("Classificação: Sobrepeso.\n");
+       } 
+       else if (imc >= 30 && imc <= 34.9) {
+           printf("Classificação: Obesidade Classe I.\n");
+       } 
+       else if (imc >= 35 && imc <= 39.9) {
+           printf("Classificação: Obesidade Classe II.\n");
+       } 
+       else if (imc >= 40) {
+           printf("Classificação: Obesidade Classe III (mórbida).\n");
+       } 
+       else {
+           printf("Classificação: Abaixo do peso.\n");
+       }
+   
+       return 0;
+   }
+CODIGO C (FIM)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//CODIGOS EM PORTUGOL (INICIO)
+
+//EX1: Calculando Área
+programa {
+  funcao inicio() {
+
+    inteiro area, largura, comprimento
+   
+      escreva("\nBem-vindo! Vamos calcular a Área².\n")
+      
+      escreva("Digite a Largura: ")
+      leia(largura)
+      
+      escreva("Digite o Comprimento: ")
+      leia(comprimento)
+
+      area = largura * comprimento
+
+      escreva("\nSua Área é: ", area," m²\n") 
+
+    escreva("\nPrograma Finalizado. Obrigado por usar!\n")
+  }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Ex2: Calculando a media de 4 notas:
+programa {
+  funcao inicio() {
+
+    inteiro n1, n2, n3, n4, media
+   
+      escreva("\nBem-vindo! Vamos calcular a Média da sua Nota, Boa sorte!.\n")
+      escreva("\nDigite Nota 1: ")
+      leia(n1)
+      escreva("\nDigite Nota 2: ")
+      leia(n2)
+      escreva("\nDigite Nota 3: ")
+      leia(n3)
+      escreva("\nDigite Nota 4: ")
+      leia(n4)
+
+      media = (n1+n2+n3+n4)/4
+      
+      escreva("\nSua nota: ",media)
+      se (media >= 5) 
+      escreva("\nAprovado!")
+      senao
+      escreva("\nReprovado!")
+      
+
+    escreva("\nPrograma Finalizado. Obrigado por usar!\n")
+  }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//EX3: Calculando idade 
+programa {
+  funcao inicio() {
+    inteiro dia, mes, ano, dia1, mes1, ano1, idade
+    
+
+    escreva("\nBem-vindo! Qual sua data de Nascimento? \n")
+    escreva("\nDia: ")
+    leia(dia)
+    escreva("\nMês: ")
+    leia(mes)
+    escreva("\nAno: ")
+    leia(ano)
+
+    escreva("\nQual a data atual? \n")
+    escreva("\nDia: ")
+    leia(dia1)
+    escreva("\nMês: ")
+    leia(mes1)
+    escreva("\nAno: ")
+    leia(ano1)
+
+    idade = ano1 - ano // Calcula a idade inicial com base no ano
+
+    // Verifica se a data de nascimento ainda não ocorreu este ano
+    se (mes1 < mes ou (mes1 == mes e dia1 < dia))
+      idade = idade - 1 // Subtrai 1 caso a pessoa ainda não tenha feito aniversário este ano
+
+    // Verifica a faixa etária
+    se (idade < 18)
+      escreva("\nVocê é menor de idade com ", idade, " anos.\n")
+    senao se (idade >= 18 e idade <= 59)
+      escreva("\nVocê é adulto com ", idade, " anos.\n")
+    senao
+      escreva("\nVocê é idoso com ", idade, " anos.\n")
+    
+
+    escreva("\nPrograma Finalizado. Obrigado por usar!\n")
+  }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// EX4: Calculando o IMC.
+// Calcule o IMC é calculado dividindo o peso em quilos pela altura em metro ao quadrado 
+// Formula: peso/(altura*altura).
+ /*
+    IMC Tabela
+    18.5 a 24.9     Normal
+    25 a 29.9       Sobre Peso
+    30 a 34.9       Obesidade Classe I
+    35 a 39.9       Obesidade Classe II
+    */
+programa {
+  funcao inicio(){
+    real peso, altura, imc
+  escreva("\nBem-vindo! Vamos Calcular o IMC \n")
+  escreva("\nQual é o seu Peso em Kg exemplo(67.8): \n")  
+  leia(peso)
+  escreva("\nQual a sua Altura em metros? exemplo(1.73): \n")
+  leia(altura)
+  imc = peso/(altura*altura)
+  escreva("\nIMC = ",imc,"\n")
+
+  se (imc >=18.5 e imc <=24.9)
+  escreva("IMC: Normal")
+  senao se (imc >=25 e imc<=29.9)
+  escreva("IMC: Sobre Peso")
+  senao se (imc >=30 e imc<=34.9)
+  escreva("IMC: Obesidade Classe I")
+  senao se (imc >=35 e imc<=39.9)
+  escreva("IMC: Obesidade Classe II")
+  senao
+  escreva("\nIMC: Morbido ")
+  }
+}
+
+//CODIGOS EM PORTUGOL (FIM)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
